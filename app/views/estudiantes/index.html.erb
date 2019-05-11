@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estudiantes</h1>
+
+<table>
+
+
+  <tbody>
+    <% @estudiantes.each do |estudiante| %>
+      <tr>
+        <div class="col s12 m7">
+            <h2 class="header"><%= estudiante.nombre %></h2>
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="/images/NextBlack.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p><br>Nombre: <%= estudiante.nombre %></br>
+                  <br>Nacionalidad: <%= estudiante.nacionalidad %></br>
+                  <br>Telefono: <%= estudiante.telefono %></br>
+                  <br>email: <%= estudiante.email %></br>
+                  <br>CC: <%= estudiante.cc %></br></p>
+                </div>
+                <div class="card-action">
+                  <%= link_to 'Show', estudiante %>
+                  <%= link_to 'Edit', edit_estudiante_path(estudiante) %>
+                  <%= link_to 'Destroy', estudiante, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      </tr>
+    <% end %>
+  </tbody>
+
+
+
+
+
+</table>
+
+<br>
+
+<%= link_to 'New Estudiante', new_estudiante_path %>

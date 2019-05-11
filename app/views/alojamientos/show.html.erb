@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @alojamiento.tipo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @alojamiento.descripcion %>
+</p>
+
+<p>
+  <strong>Reglas:</strong>
+  <%= @alojamiento.reglas %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @alojamiento.imagen %>
+</p>
+
+<p>
+  <strong>Sitios interes:</strong>
+  <%= @alojamiento.sitios_interes %>
+</p>
+
+<p>
+  <strong>Clasificacion:</strong>
+  <%= @alojamiento.clasificacion %>
+</p>
+
+<p>
+  <strong>Calificacion:</strong>
+  <%= @alojamiento.calificacion %>
+</p>
+
+<p>
+  <strong>Cercano:</strong>
+  <%= @alojamiento.cercano %>
+</p>
+
+<%= link_to 'Edit', edit_alojamiento_path(@alojamiento) %> |
+<%= link_to 'Back', alojamientos_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: alojamiento, local: true) do |form| %>
+  <% if alojamiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alojamiento.errors.count, "error") %> prohibited this alojamiento from being saved:</h2>
+
+      <ul>
+      <% alojamiento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :alojamiento_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :alojamiento_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reglas %>
+    <%= form.text_field :reglas, id: :alojamiento_reglas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagen %>
+    <%= form.text_field :imagen, id: :alojamiento_imagen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sitios_interes %>
+    <%= form.text_field :sitios_interes, id: :alojamiento_sitios_interes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clasificacion %>
+    <%= form.text_field :clasificacion, id: :alojamiento_clasificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calificacion %>
+    <%= form.text_field :calificacion, id: :alojamiento_calificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cercano %>
+    <%= form.text_field :cercano, id: :alojamiento_cercano %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

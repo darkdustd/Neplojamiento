@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alojamientos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Descripcion</th>
+      <th>Reglas</th>
+      <th>Imagen</th>
+      <th>Sitios interes</th>
+      <th>Clasificacion</th>
+      <th>Calificacion</th>
+      <th>Cercano</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+    <div class="col s12 m7">
+        <h2 class="header">Horizontal Card</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://lorempixel.com/100/190/nature/6">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% @alojamientos.each do |alojamiento| %>
+      <tr>
+        <td><%= alojamiento.tipo %></td>
+        <td><%= alojamiento.descripcion %></td>
+        <td><%= alojamiento.reglas %></td>
+        <td><%= alojamiento.imagen %></td>
+        <td><%= alojamiento.sitios_interes %></td>
+        <td><%= alojamiento.clasificacion %></td>
+        <td><%= alojamiento.calificacion %></td>
+        <td><%= alojamiento.cercano %></td>
+
+        <td><%= link_to 'Show', alojamiento %></td>
+        <td><%= link_to 'Edit', edit_alojamiento_path(alojamiento) %></td>
+        <td><%= link_to 'Destroy', alojamiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alojamiento', new_alojamiento_path %>

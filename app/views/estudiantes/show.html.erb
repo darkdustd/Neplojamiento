@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @estudiante.nombre %>
+</p>
+
+<p>
+  <strong>Nacionalidad:</strong>
+  <%= @estudiante.nacionalidad %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @estudiante.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @estudiante.email %>
+</p>
+
+<p>
+  <strong>Cc:</strong>
+  <%= @estudiante.cc %>
+</p>
+
+<%= link_to 'Edit', edit_estudiante_path(@estudiante) %> |
+<%= link_to 'Back', estudiantes_path %>

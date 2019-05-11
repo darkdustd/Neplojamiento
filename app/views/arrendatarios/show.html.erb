@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @arrendatario.nombre %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @arrendatario.telefono %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @arrendatario.correo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @arrendatario.email %>
+</p>
+
+<p>
+  <strong>Cc:</strong>
+  <%= @arrendatario.cc %>
+</p>
+
+<%= link_to 'Edit', edit_arrendatario_path(@arrendatario) %> |
+<%= link_to 'Back', arrendatarios_path %>

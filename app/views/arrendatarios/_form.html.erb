@@ -1,0 +1,42 @@
+<%= form_with(model: arrendatario, local: true) do |form| %>
+  <% if arrendatario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arrendatario.errors.count, "error") %> prohibited this arrendatario from being saved:</h2>
+
+      <ul>
+      <% arrendatario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :arrendatario_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono, id: :arrendatario_telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :arrendatario_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :arrendatario_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cc %>
+    <%= form.text_field :cc, id: :arrendatario_cc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+{
+  "name": "appAlojamiento",
+  "private": true,
+  "dependencies": {
+    "simple-parallax-js": "^4.2.1"
+  }
+}
